@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>YouTubeIframeLoader demo</title>
+</head>
+
+<body>
+	<div id="player1"></div>
+	<div id="player2"></div>
+
+	<script type="text/javascript" src="index.js"></script>
+
+	<script type="text/javascript">
+	YouTubeIframeLoader.load(function(YT) {
+		new YT.Player('player1', {
+			height: '390',
+			width: '640',
+			videoId: 'M7lc1UVf-VE'
+		});
+	});
+
+	YouTubeIframeLoader.load(function(YT) {
+		new YT.Player('player2', {
+			height: '390',
+			width: '640',
+			videoId: 'dQw4w9WgXcQ'
+		});
+	});
+	</script>
+</body>
+
+</html>
