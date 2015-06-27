@@ -27,3 +27,10 @@ YouTubeIframeLoader.load(function(YT) {
 	});
 });
 ```
+
+
+## Changelog
+
+### 1.0.1
+
+* Always use https instead of the protocol-relative URL (#1)
