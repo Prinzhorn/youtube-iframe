@@ -1,6 +1,6 @@
 (function(window) {
 	var YouTubeIframeLoader = {
-		src: '//www.youtube.com/iframe_api',
+		src: 'https://www.youtube.com/iframe_api',
 		loading: false,
 		loaded: false,
 		listeners: [],
