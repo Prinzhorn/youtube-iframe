@@ -6,10 +6,13 @@
 		listeners: [],
 
 		load: function(callback) {
+			var _this = this;
 			this.listeners.push(callback);
 
 			if(this.loaded) {
-				this.done();
+				setTimeout(function() {
+					_this.done();
+				});
 				return;
 			}
 
@@ -19,7 +22,6 @@
 
 			this.loading = true;
 
-			var _this = this;
 			window.onYouTubeIframeAPIReady = function() {
 				_this.loaded = true;
 				_this.done();
