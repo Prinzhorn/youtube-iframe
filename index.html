@@ -9,8 +9,19 @@
 </head>
 
 <body>
+	<h1>YouTubeIframeLoader demo</h1>
+
+	<h2>First player (first load() call)</h2>
 	<div id="player1"></div>
+
+	<h2>Second player (second load() call, queued after first)</h2>
 	<div id="player2"></div>
+
+	<h2>Third player (load() was called inside another load() handler)</h2>
+	<div id="player3"></div>
+
+	<h2>Fourth player (load() was called after 10s delay)</h2>
+	<div id="player4"></div>
 
 	<script type="text/javascript" src="index.js"></script>
 
@@ -29,7 +40,25 @@
 			width: '640',
 			videoId: 'dQw4w9WgXcQ'
 		});
+
+		YouTubeIframeLoader.load(function(YT) {
+			new YT.Player('player3', {
+				height: '390',
+				width: '640',
+				videoId: 'y6120QOlsfU'
+			});
+		});
 	});
+
+	setTimeout(function() {
+		YouTubeIframeLoader.load(function(YT) {
+			new YT.Player('player4', {
+				height: '390',
+				width: '640',
+				videoId: '9bZkp7q19f0'
+			});
+		});
+	}, 5 * 1000);
 	</script>
 </body>
 
