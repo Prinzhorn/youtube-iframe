@@ -31,6 +31,11 @@ YouTubeIframeLoader.load(function(YT) {
 
 ## Changelog
 
+### 1.0.2
+
+* Always call the callback asynchronously (#2)
+* Fixed a bug with infinite recursion when nesting load() calls
+
 ### 1.0.1
 
 * Always use https instead of the protocol-relative URL (#1)
