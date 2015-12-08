@@ -36,11 +36,9 @@
 		done: function() {
 			delete window.onYouTubeIframeAPIReady;
 
-			for(var listenerIndex = 0; listenerIndex < this.listeners.length; listenerIndex++) {
-				this.listeners[listenerIndex](window.YT);
+			while(this.listeners.length) {
+				this.listeners.pop()(window.YT);
 			}
-
-			this.listeners.length = 0;
 		}
 	};
 
