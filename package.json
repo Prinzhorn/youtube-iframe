@@ -1,6 +1,6 @@
 {
   "name": "youtube-iframe",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Wrapper for dynamically loading the YouTube iframe api script",
   "main": "index.js",
   "scripts": {

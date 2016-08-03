@@ -31,6 +31,10 @@ YouTubeIframeLoader.load(function(YT) {
 
 ## Changelog
 
+### 1.0.3
+
+* Typescript support (#3)
+
 ### 1.0.2
 
 * Always call the callback asynchronously (#2)
